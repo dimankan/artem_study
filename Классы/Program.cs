@@ -39,7 +39,7 @@ namespace Классы
             List<People> peoples1 = new List<People>() { artem, people1, people2, people3 };
             foreach (People item in peoples1)
             {
-                Console.WriteLine(item.SalaRys);
+                Console.WriteLine(item.SalaRy);
             }
             for (int i = 0; i < peoples1.Count; i++)
             {
