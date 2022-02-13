@@ -13,17 +13,21 @@ namespace Классы
             Car bmw = new Car("x6", 5000000);
             Car vw = new Car("Passat", 3000000);
 
-            bmw.ShowInfo();
-            vw.ShowInfo();
+            //int x = vw._price;
+            //vw.ChangePrice(2323);
 
-            Car.CalcPlusShow(5,6);
-            StaticMethods.CalcMinusShow(5,6);
-            StaticMethods.CalcMultiplayShow(5,6);
+            //vw.Price = 232; // SET - Установка
+            Console.WriteLine(vw.Price); // GET - Считывание
+            int d = vw.Price; // GET - Считывание
 
-            System.Console.WriteLine();
 
-            ElectroCar tesla = new ElectroCar();
-            tesla.ShowInfo();
+            string result = bmw.Info;
+            Console.WriteLine(result);
+
+
+            //bmw.ShowInfo();
+            //vw.ShowInfo();
+
 
         }
     }
@@ -32,16 +36,45 @@ namespace Классы
     {
         private protected string _model;
         int _price;
+        //private int _yearOfMade;
+
+        public int YearOfMade { get; set; }
+
+        public int Price
+        {
+            get { return _price; }
+            private set
+            {
+
+                if (value < 0 || value > 100000)
+                {
+                    Console.WriteLine("Ты че ебанутый? СТолько тачка не стоит");
+                }
+                else
+                {
+                    _price = value;
+                }
+            }
+        }
+
+        public string Info
+        {
+            get { return $"{_model} стоит {_price}"; }
+        }
+
+
+        //public void ChangePrice(int x)
+        //{
+        //    _price = x;
+        //}
+
+
+
 
         public Car(string x, int y)
         {
             _model = x;
-            _price = y;
-        }
-
-        public Car()
-        {
-
+            Price = y;
         }
 
         public void ShowInfo()
@@ -52,17 +85,8 @@ namespace Классы
 
         public static void CalcPlusShow(int x, int y)
         {
-            //Console.WriteLine($"{x+y}");
             Console.WriteLine($"{x + y}");
         }
     }
 
-    class ElectroCar : Car
-    {
-        public void MethodElectro()
-        {
-            Console.WriteLine(_model);
-        }
-        
-    }
 }
