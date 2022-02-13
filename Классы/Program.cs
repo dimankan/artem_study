@@ -1,6 +1,7 @@
-﻿using System;
-using Meth;
-using Meth.oneFolder;
+﻿using Meth;
+using System;
+
+
 
 
 namespace Классы
@@ -19,13 +20,17 @@ namespace Классы
             StaticMethods.CalcMinusShow(5,6);
             StaticMethods.CalcMultiplayShow(5,6);
 
-            Class1 class1 = new Class1();
+            System.Console.WriteLine();
+
+            ElectroCar tesla = new ElectroCar();
+            tesla.ShowInfo();
+
         }
     }
 
     class Car
     {
-        private string _model;
+        private protected string _model;
         int _price;
 
         public Car(string x, int y)
@@ -34,7 +39,10 @@ namespace Классы
             _price = y;
         }
 
-        
+        public Car()
+        {
+
+        }
 
         public void ShowInfo()
         {
@@ -47,5 +55,14 @@ namespace Классы
             //Console.WriteLine($"{x+y}");
             Console.WriteLine($"{x + y}");
         }
+    }
+
+    class ElectroCar : Car
+    {
+        public void MethodElectro()
+        {
+            Console.WriteLine(_model);
+        }
+        
     }
 }
