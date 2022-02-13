@@ -13,17 +13,10 @@ namespace Классы
             Car bmw = new Car("x6", 5000000);
             Car vw = new Car("Passat", 3000000);
 
-            //int x = vw._price;
-            //vw.ChangePrice(2323);
+            bmw.YearOfMade = 2015;
+            Console.WriteLine(bmw.YearOfMade);
 
-            //vw.Price = 232; // SET - Установка
-            Console.WriteLine(vw.Price); // GET - Считывание
-            int d = vw.Price; // GET - Считывание
-
-
-            string result = bmw.Info;
-            Console.WriteLine(result);
-
+            bmw.ShowInfo();
 
             //bmw.ShowInfo();
             //vw.ShowInfo();
@@ -34,27 +27,17 @@ namespace Классы
 
     class Car
     {
-        private protected string _model;
+        private protected string _model = "Volvo";
         int _price;
         //private int _yearOfMade;
 
-        public int YearOfMade { get; set; }
+
+        public int YearOfMade { get; init; };
 
         public int Price
         {
             get { return _price; }
-            private set
-            {
-
-                if (value < 0 || value > 100000)
-                {
-                    Console.WriteLine("Ты че ебанутый? СТолько тачка не стоит");
-                }
-                else
-                {
-                    _price = value;
-                }
-            }
+            set { _price = value; }
         }
 
         public string Info
@@ -75,11 +58,12 @@ namespace Классы
         {
             _model = x;
             Price = y;
+            YearOfMade = 3423;
         }
 
         public void ShowInfo()
         {
-            Console.WriteLine($"Модель: {_model}, стоит: {_price}");
+            Console.WriteLine($"Модель: {_model}, стоит: {_price}, год производства {YearOfMade}");
         }
 
 
