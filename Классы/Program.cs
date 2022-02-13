@@ -32,7 +32,7 @@ namespace Классы
         //private int _yearOfMade;
 
 
-        public int YearOfMade { get; init; };
+        public int YearOfMade { get; set; }
 
         public int Price
         {
