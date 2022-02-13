@@ -1,4 +1,7 @@
 ﻿using System;
+using Meth;
+using Meth.oneFolder;
+
 
 namespace Классы
 {
@@ -15,6 +18,8 @@ namespace Классы
             Car.CalcPlusShow(5,6);
             StaticMethods.CalcMinusShow(5,6);
             StaticMethods.CalcMultiplayShow(5,6);
+
+            Class1 class1 = new Class1();
         }
     }
 
@@ -28,6 +33,8 @@ namespace Классы
             _model = x;
             _price = y;
         }
+
+        
 
         public void ShowInfo()
         {
