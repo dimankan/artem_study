@@ -8,16 +8,8 @@ namespace Классы
     {
         static void Main(string[] args)
         {
-            try
-            {
-                int x = 5;
-                int y = x / 0;
-                Console.WriteLine($"Результат: {y}");
-            }
-            catch (DivideByZeroException ex)
-            {
-                Console.WriteLine($"Возникло исключение {ex.Message}");
-            }
+            int x = SumMul(5, 20);
+            Console.WriteLine(x);
         }
         public static bool isDivisible(long n, long x, long y)
         {
@@ -100,6 +92,30 @@ namespace Классы
             else
             {
                 result = "Shiver me timbers!";
+            }
+            return result;
+        }
+
+        public static int SumMul(int n, int m)
+        {
+           if (n == 0)
+            {
+                throw new ArgumentException();
+            }
+           if (n > m)
+            {
+                throw new ArgumentException();
+            }
+           int result = 0;
+            int temp = n;
+            while (true)
+            {
+                if (m < temp)
+                {
+                    break;
+                }
+                result += temp;
+                temp += n;
             }
             return result;
         }
