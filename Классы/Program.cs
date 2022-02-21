@@ -8,52 +8,104 @@ namespace Классы
     {
         static void Main(string[] args)
         {
-            #region Работа с классом People
-            /*
-              People artem = new People();
-            artem.Name = "Dima";
-            artem.Sname = "Vor";
-            artem.Yers = 33;
-            artem.Show();
-
-            People people = new People("Artem");
-           // people.Yers = 155; 
-            people.Show();
-
-            People people1 = new People("Artem", "Petrov");
-            people1.Show();
-
-            People people2 = new People("Artem", "Petrov", 150);
-            people2.Show();
-
-            People people3 = new People("Vanya", "Grigorev", 26, 45500);
-            people3.Show();
-
-            People[] peoples = new People[] {artem, people1, people2, people3};
-            foreach (People item in peoples)
+            try
             {
-                Console.WriteLine(item.Name);
+                int x = 5;
+                int y = x / 0;
+                Console.WriteLine($"Результат: {y}");
             }
-            for (int i = 0; i < peoples.Length; i++)
+            catch (DivideByZeroException ex)
             {
-                Console.WriteLine(peoples[i].Sname);
+                Console.WriteLine($"Возникло исключение {ex.Message}");
             }
-            List<People> peoples1 = new List<People>() { artem, people1, people2, people3 };
-            foreach (People item in peoples1)
+        }
+        public static bool isDivisible(long n, long x, long y)
+        {
+            bool result = false;
+            bool a = x % n == 0;
+            bool b = y % n == 0;
+            if (a && b)
             {
-                Console.WriteLine(item.SalaRy);
+                result = true;
             }
-            for (int i = 0; i < peoples1.Count; i++)
+
+            return result;
+        }
+        public static int[] CountPositivesSumNegatives(int[] input)
+        {
+
+            if (input == null)
             {
-                Console.WriteLine(peoples1[i].Yers);
+                return new int[0] { };
             }
-             */
-            #endregion
+
+            else if (input.Length == 0)
+            {
+                return new int[0] { };
+            }
+
+            int[] result = { 0, 0 };
+
+            foreach (var item in input)
+            {
+                if (item > 0)
+                {
+                    result[0] += 1;
+                }
+                else if (item < 0)
+                {
+                    result[1] += item;
+                }
+
+            }
+            return result;
 
 
         }
+        public static int Remainder(int a, int b)
+        {
+           int result = 0;
+            if (a > b)
+            {
+                result = a % b;
+            }
+            else if (a < b)
+            {
+                result = b % a;
+            }
+            else
+            {
+                throw new DivideByZeroException();
+            }
+            
+
+            return result;
+        }
+        public static string CannonsReady(Dictionary<string, string> gunners)
+        {
+            string result = "";
+            int count = gunners.Count;
+            int countReady = 0;
+            foreach (var item in gunners)
+            {
+                if (item.Value == "aye")
+                {
+                    countReady++;
+                }
+            }
+            if (countReady == count)
+            {
+                result = "Fire!";
+            }
+            else
+            {
+                result = "Shiver me timbers!";
+            }
+            return result;
+        }
     }
-   
+
+
 }
 
 #region Черновик
