@@ -1,4 +1,5 @@
 ﻿using ConsoleArt.Classes;
+using ConsoleArt.Classes.OOP.Inheritance;
 using Meth;
 using System;
 
@@ -14,9 +15,92 @@ namespace Классы
             //RunCodeWars();
             //RunPeople();
             //RunCar(); 
+
+
+            //RunNasledniki1();
+            //RunUpCasting();
+            //RunUpcastDowncast();
             #endregion
 
         }
+
+        private static void RunNasledniki1()
+        {
+
+            Person person = new Person("Tom");
+            person.Print();   // Tom
+
+            person = new Employee("Sam", "IBM");
+            person.Print();   // Sam
+
+        }
+        private static void RunUpCasting()
+        {
+            Employee employee = new Employee("Tom", "Microsoft");
+            Person person = employee;   // преобразование от Employee к Person
+            person.Print();
+            //Console.WriteLine(person.Name);
+
+
+            Person bob = new Client("Bob", "ContosoBank");   // преобразование от Client к Person
+            Console.WriteLine(bob.Name);
+
+            object person1 = new Employee("Tom", "Microsoft");  // от Employee к object
+            object person2 = new Client("Bob", "ContosoBank");  // от Client к object
+            object person3 = new Person("Sam");
+        }
+        private static void RunUpcastDowncast()
+        {
+            Employee employee = new Employee("Tom", "Microsoft");
+            Person person = employee;   // преобразование от Employee к Person
+
+            //DownCasting
+            //Employee employee2 = person;    // так нельзя, нужно явное преобразование
+            Employee employee1 = (Employee)person;
+
+
+            // Exception try/catch
+            try
+            {
+                Person person21 = new Person("Bob");
+                Employee employee2 = (Employee)person21; // ! Ошибка
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Ошибка: " + ex.Message);
+            }
+            Console.WriteLine("-----------AS---------------------------");
+
+            // As
+            Person person333 = new Person("Tom");
+            Employee? employee333 = person333 as Employee;
+            if (employee333 == null)
+            {
+                Console.WriteLine("Преобразование прошло неудачно");
+            }
+            else
+            {
+                Console.WriteLine(employee333.Company);
+            }
+
+            Console.WriteLine("------------IS--------------------------");
+            // Is
+            Person person1 = new Person("Bob");
+            bool isEmployee = person1 is Employee;
+
+
+            if (isEmployee)
+            {
+                Console.WriteLine("Все ок");
+            }
+            else
+            {
+                Console.WriteLine("Вернул false");
+            }
+        }
+
+
 
         #region RunMethods
 
