@@ -25,9 +25,9 @@ namespace ConsoleArt.Classes.OOP.Inheritance
             Name = name;
         }
 
-        public void Print()
+        public virtual void Print()
         {
-            Console.WriteLine(Name);
+            Console.WriteLine("Имя: " + Name);
         }
     }
 
@@ -40,18 +40,48 @@ namespace ConsoleArt.Classes.OOP.Inheritance
             Company = company;
         }
 
+        public override /*sealed*/ void Print()
+        {
+            Console.WriteLine("Имя: " + Name + " Компания: " + Company);
+        }
+
+
         //public Employee(string name, string company) : base()    // ! Ошибка
         //{
         //    Name = name;
         //    Company = company;
         //}
     }
-        class Client : Person
+
+
+
+    class Manager : Employee
+    {
+        public int Salary { get; set; }
+        public Manager(string name, string company, int salary) : base(name, company)
+        {
+            this.Salary = salary;
+        }
+        public override void Print()
+        {
+            base.Print();
+            Console.WriteLine("Имя: " + Name + " Компания: " + Company + " ЗП: " + Salary);
+        }
+    }
+
+
+
+    class Client : Person
     {
         public string Bank { get; set; }
         public Client(string name, string bank) : base(name)
         {
             Bank = bank;
+        }
+
+        public override void Print()
+        {
+            Console.WriteLine("Имя: " + Name + " Банк: " + Bank);
         }
     }
 

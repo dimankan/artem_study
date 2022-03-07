@@ -22,6 +22,19 @@ namespace Классы
             //RunUpcastDowncast();
             #endregion
 
+
+            Person person = new Person("Ваня");
+            person.Print();
+
+            Employee employee = new Employee("Игорь", "Яндекс");
+            employee.Print();
+
+            //Client client = new Client("Толя", "ВТБ");
+            //client.Print();
+
+            Manager manager = new Manager("Dima", "GNIVC", 30000);
+            manager.Print();
+
         }
 
         private static void RunNasledniki1()
