@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Классы", "Классы.csproj", "{99F47B02-F6D4-41A8-9F70-6BAED5DBFDA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleArt", "ConsoleArt.csproj", "{99F47B02-F6D4-41A8-9F70-6BAED5DBFDA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "..\Library\Library.csproj", "{934626BA-2A00-4C49-8853-A8EC370CE167}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library", "..\Library\Library.csproj", "{934626BA-2A00-4C49-8853-A8EC370CE167}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsCalc", "..\WinFormsCalc\WinFormsCalc.csproj", "{145D527B-1FFB-412A-A0D5-176CD9AC3960}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{934626BA-2A00-4C49-8853-A8EC370CE167}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{934626BA-2A00-4C49-8853-A8EC370CE167}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{934626BA-2A00-4C49-8853-A8EC370CE167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{145D527B-1FFB-412A-A0D5-176CD9AC3960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{145D527B-1FFB-412A-A0D5-176CD9AC3960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{145D527B-1FFB-412A-A0D5-176CD9AC3960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{145D527B-1FFB-412A-A0D5-176CD9AC3960}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
