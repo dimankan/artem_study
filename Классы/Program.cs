@@ -1,5 +1,6 @@
 ﻿using ConsoleArt.Classes;
 using ConsoleArt.Classes.OOP.Inheritance;
+using ConsoleArt.Classes.OOP.Polymorh;
 using Meth;
 using System;
 
@@ -20,9 +21,35 @@ namespace Классы
             //RunNasledniki1();
             //RunUpCasting();
             //RunUpcastDowncast();
+            //RunPolymorh();
             #endregion
 
+            //Figure figure = new Figure(1);
+            //figure.Show();
 
+            Rectangle rectangle = new Rectangle(5, 6);
+            //rectangle.Show();
+
+            Sque sque = new Sque(5);
+            //sque.Show();
+
+            Triangle triangle = new Triangle(3, 3, 3);
+            //triangle.Show();
+
+            Figure[] figures = new Figure[] { rectangle, sque, triangle };
+
+            //foreach (var item in figures)
+            //{
+            //    item.Show();
+            //}
+
+            Figure figure = new Triangle(5, 5, 5);
+            figure.Show();
+
+        }
+
+        private static void RunPolymorh()
+        {
             Person person = new Person("Ваня");
             person.Print();
 
@@ -34,9 +61,7 @@ namespace Классы
 
             Manager manager = new Manager("Dima", "GNIVC", 30000);
             manager.Print();
-
         }
-
         private static void RunNasledniki1()
         {
 
