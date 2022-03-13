@@ -24,6 +24,12 @@ namespace Классы
             //RunPolymorh();
             #endregion
 
+            //RunFigures();
+
+        }
+
+        private static void RunFigures()
+        {
             //Figure figure = new Figure(1);
             //figure.Show();
 
@@ -38,14 +44,10 @@ namespace Классы
 
             Figure[] figures = new Figure[] { rectangle, sque, triangle };
 
-            //foreach (var item in figures)
-            //{
-            //    item.Show();
-            //}
-
-            Figure figure = new Triangle(5, 5, 5);
-            figure.Show();
-
+            foreach (var item in figures)
+            {
+                item.Show();
+            }
         }
 
         private static void RunPolymorh()
