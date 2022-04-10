@@ -1,4 +1,5 @@
-﻿using ConsoleArt.Classes;
+﻿using ConsoleArt;
+using ConsoleArt.Classes;
 using ConsoleArt.Classes.OOP.Inheritance;
 using ConsoleArt.Classes.OOP.Polymorh;
 using Meth;
@@ -22,10 +23,29 @@ namespace Классы
             //RunUpCasting();
             //RunUpcastDowncast();
             //RunPolymorh();
-            #endregion
-
             //RunFigures();
+            //RunObject();
+            #endregion
+            Generic<string, string> sa = new Generic<string, string>("sasd", "sa");
+            Generic<int, string> ssas = new Generic<int, string>(2222, "sadasda");
 
+
+
+
+        }
+
+        private static void RunObject()
+        {
+            string x = "Artem";
+            string y = "Artem";
+
+            if (x.GetHashCode() == y.GetHashCode())
+            {
+                Console.WriteLine("Значение одинаковые");
+            }
+
+            //Console.WriteLine(x.GetHashCode()) ;
+            //Console.WriteLine(x.GetType());
         }
 
         private static void RunFigures()
@@ -41,6 +61,10 @@ namespace Классы
 
             Triangle triangle = new Triangle(3, 3, 3);
             //triangle.Show();
+            triangle.GetType();
+
+            //Figure figure = new Figure(22);
+            //figure.Show();
 
             Figure[] figures = new Figure[] { rectangle, sque, triangle };
 

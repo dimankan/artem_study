@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleArt.Classes.OOP.Polymorh
 {
-    public class Figure
+    public abstract class Figure
     {
         private int _a ;
         public int A

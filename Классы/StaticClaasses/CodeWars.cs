@@ -8,6 +8,7 @@ namespace Классы
 {
     public static class CodeWars
     {
+        public static string name;
         public static bool isDivisible(long n, long x, long y)
         {
             bool result = false;
