@@ -18,36 +18,35 @@ namespace CMD_Xpuct
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+      
+        private void Form1_Load(object sender, EventArgs e)
         {
-            var psi = new ProcessStartInfo
-            {
-                FileName = "cmd",
-                Arguments = "/c time /t",
-                UseShellExecute = false,
-                CreateNoWindow = true,
-                RedirectStandardOutput = true,
-            };
+            tbCurrentAdress.Text = Library.RunCMD("cd");
+        }
 
-            var psi2 = new ProcessStartInfo
-            {
-                FileName = "cmd",
-                Arguments = "/c chcp 65001 & ipconfig",
-                UseShellExecute = false,
-                CreateNoWindow = true,
-                RedirectStandardOutput = true,
-            };
-             
-           
+        private void btRun_Click(object sender, EventArgs e)
+        {
+            tbOutput.Text = Library.RunCMD(tbCurrentAdress.Text, tbInput.Text, cbCHCP.Text);
+        }
 
-
-            Process process = Process.Start(psi2);
-
-            textBox1.Text = process.StandardOutput.ReadToEnd();
-            label1.Text = process.StandardOutput.ReadToEnd();
+        private void tbInput_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
-        
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    Library.ChooseFolder(tbCurrentAdress.Text);
+        //}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Library.OpenDirectory(tbCurrentAdress.Text);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
