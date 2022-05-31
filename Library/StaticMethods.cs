@@ -7,11 +7,21 @@ using System.Threading.Tasks;
 namespace Meth
 
 {
-    public static class StaticMethods
+    public class StaticMethods
     {
+        public StaticMethods()
+        {
+
+        }
+
+        public int CalcPlus(int x, int y)
+        {
+            return x + y;
+        }
+
+
         public static void CalcPlusShow(int x, int y)
         {
-            //Console.WriteLine($"{x+y}");
             Console.WriteLine($"{x + y}");
         }
 

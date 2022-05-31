@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32428.217
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleArt", "ConsoleArt.csproj", "{99F47B02-F6D4-41A8-9F70-6BAED5DBFDA5}"
 EndProject
@@ -14,6 +14,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegexStudy", "..\RegexStudy\RegexStudy.csproj", "{A2F46D16-05BE-4CCB-8BF2-A956B0940D14}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMD_Xpuct", "..\CMD_Xpuct\CMD_Xpuct.csproj", "{698F8A25-4994-4875-88AD-EB8F5762A245}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Trash", "Trash", "{4FD40CE9-6068-4CF6-9B90-1BCE7DA27CF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "..\Demo\Demo.csproj", "{9073C07D-9DB1-4C0A-83AC-B302EF7AE012}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,9 +49,16 @@ Global
 		{698F8A25-4994-4875-88AD-EB8F5762A245}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{698F8A25-4994-4875-88AD-EB8F5762A245}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{698F8A25-4994-4875-88AD-EB8F5762A245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9073C07D-9DB1-4C0A-83AC-B302EF7AE012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9073C07D-9DB1-4C0A-83AC-B302EF7AE012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9073C07D-9DB1-4C0A-83AC-B302EF7AE012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9073C07D-9DB1-4C0A-83AC-B302EF7AE012}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9073C07D-9DB1-4C0A-83AC-B302EF7AE012} = {4FD40CE9-6068-4CF6-9B90-1BCE7DA27CF2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A27D0DF3-702A-4726-A3EE-2C2B2DA38431}
