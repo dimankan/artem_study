@@ -147,7 +147,7 @@
             // 
             // tbIP
             // 
-            this.tbIP.Location = new System.Drawing.Point(326, 52);
+            this.tbIP.Location = new System.Drawing.Point(308, 52);
             this.tbIP.Name = "tbIP";
             this.tbIP.Size = new System.Drawing.Size(183, 23);
             this.tbIP.TabIndex = 11;
@@ -168,7 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 387);
+            this.ClientSize = new System.Drawing.Size(1105, 573);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.tbIP);
             this.Controls.Add(this.button5);
